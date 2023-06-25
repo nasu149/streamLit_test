@@ -43,16 +43,16 @@ class PersonName:
 
 
         
-    def get_row_people_names(self):
-        response = openai.ChatCompletion.create(
-            model=self.model,
-            messages=[
-                {"role": self.role, "content": self.message},
-            ],
-        )
-        row_text = response.choices[0]["message"]["content"].strip()
-        print('row_text = ', row_text)
-        return row_text
+    # def get_row_people_names(self):
+    #     response = openai.ChatCompletion.create(
+    #         model=self.model,
+    #         messages=[
+    #             {"role": self.role, "content": self.message},
+    #         ],
+    #     )
+    #     row_text = response.choices[0]["message"]["content"].strip()
+    #     print('row_text = ', row_text)
+    #     return row_text
         
 
     def process_row_text(self, row_text):
