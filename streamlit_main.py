@@ -1,27 +1,27 @@
 import streamlit as st
-import openai
+# import openai
 import os
 import PersonName
 import global_value as g
 
 # openai.api_key = os.environ['OPENAI_API_KEY']
-def create_image_from_text(text, photo_count):
+# def create_image_from_text(text, photo_count):
     
-    # 応答設定
-    response = openai.Image.create(
-                  prompt = text,             # 画像生成に用いる説明文章
-                  n = photo_count,                     # 何枚の画像を生成するか
-                  size = '256x256',          # 画像サイズ
-                  response_format = "url"    # API応答のフォーマット
-                )
+#     # 応答設定
+#     response = openai.Image.create(
+#                   prompt = text,             # 画像生成に用いる説明文章
+#                   n = photo_count,                     # 何枚の画像を生成するか
+#                   size = '256x256',          # 画像サイズ
+#                   response_format = "url"    # API応答のフォーマット
+#                 )
 
-    # API応答から画像URLを指定
-    urls = []
-    for i in range(photo_count):
-        image_url = response['data'][i]['url']
-        urls.append(image_url)
+#     # API応答から画像URLを指定
+#     urls = []
+#     for i in range(photo_count):
+#         image_url = response['data'][i]['url']
+#         urls.append(image_url)
         
-    return urls
+#     return urls
 
 
 
